@@ -1,0 +1,18 @@
+{
+  "name": "gruntfile-utils",
+  "version": "0.1.0",
+  "description": "Simple library utilizing gruntfiles outside of the command line.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "grunt": "^0.4.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Carl Henderson",
+  "license": "ISC"
+}
