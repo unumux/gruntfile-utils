@@ -13,6 +13,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Carl Henderson",
-  "license": "ISC"
+  "author": {
+    "name": "Carl Henderson"
+  },
+  "license": "ISC",
+  "gitHead": "20f1da36e07f5c0ea77d1dbe6c23ca8db50debd5",
+  "readme": "# gruntfile-utils\r\n\r\nSimple library utilizing gruntfiles outside of the command line. Needs lots of work and testing.\r\n\r\n## Available methods\r\n\r\n### getTasks(filename, taskArray)\r\nGet a list of available tasks in a gruntfile\r\n* filename: the name of the gruntfile, including path\r\n* taskArray: an empty array that tasks will be stored in\r\n\r\n### getHash(filename)\r\nReturn a SHA1 hash of the gruntfile. Useful for caching\r\n* filename: the name of the gruntfile, including path\r\n\r\n### runTask(taskname, filename)\r\nRuns a grunt task. Returns a child_process stream\r\n",
+  "readmeFilename": "README.md",
+  "_id": "gruntfile-utils@0.1.0",
+  "_shasum": "a7c0a26c283af341a709c5a2cf061710ac657b97",
+  "_from": "gruntfile-utils@*"
 }

@@ -8,6 +8,7 @@ var Stream = require('stream');
 module.exports = {
     getTasks: function(filename, taskArray) {
         var oldGruntRegisterTask = grunt.task.registerTask;
+        var origDir = process.cwd();
         process.chdir(path.dirname(filename));
         var gruntfile = require(filename);
 
@@ -19,6 +20,7 @@ module.exports = {
         grunt.registerTask = grunt.task.registerTask;
 
         gruntfile(grunt);        
+        process.chdir(origDir);
     },
     getHash: function(filename) {
         var fd = fs.createReadStream(filename);
@@ -35,9 +37,8 @@ module.exports = {
     },
     runTask: function(taskname, filename) {
         var fork = require('child_process').fork;
-        
-        var ls = fork('./lib/run-grunt-process.js', [path.resolve(filename), taskname], { silent: true });
-        
+        var ls = fork(path.resolve(__dirname + '/lib/run-grunt-process.js'), [filename, taskname], { silent: true, execPath: 'node' });
+
         return ls;
         
     }
