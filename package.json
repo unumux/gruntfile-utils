@@ -1,6 +1,6 @@
 {
   "name": "gruntfile-utils",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Simple library utilizing gruntfiles outside of the command line.",
   "main": "index.js",
   "directories": {
